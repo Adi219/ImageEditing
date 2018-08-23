@@ -7,7 +7,7 @@ tolerance = int(input("Tolerance:\t"))
 def selectObject(name, origX, origY, tolerance):
 
     if __name__ == '__main__':
-        img = Image.open('C:/Adi/Programming/AdiPython/AdiScripts/Others/Art/InputImages/' + name)
+        img = Image.open(YOURFILEPATH + name)
     else:
         img = Image.open(name)
 
@@ -83,7 +83,7 @@ def selectObject(name, origX, origY, tolerance):
     new.putdata(newData)
 
     if __name__ == '__main__':
-        new.save('C:/Adi/Programming/AdiPython/AdiScripts/Others/Art/GeneratedImages/' + name[: name.index('.')] + "Select" + str(tolerance) + str(origX) + str(origY) + '.png')
+        new.save(YOURFILEPATH + name[: name.index('.')] + "Select" + str(tolerance) + str(origX) + str(origY) + '.png')
     else:
         dest = input("Destination:\t")
         new.save(dest + '.png')
