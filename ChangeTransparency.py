@@ -6,7 +6,7 @@ alphaValue = float(input("Alpha Value:\t"))
 def changeBrightness(name, alphaValue):
 
     if __name__ == '__main__':
-        img = Image.open('C:/Adi/Programming/AdiPython/AdiScripts/Others/Art/InputImages/' + name)
+        img = Image.open(YOURFILEPATH + name)
     else:
         img = Image.open(name)
 
@@ -25,7 +25,7 @@ def changeBrightness(name, alphaValue):
     new.putdata(newData)
 
     if __name__ == '__main__':
-        new.save('C:/Adi/Programming/AdiPython/AdiScripts/Others/Art/GeneratedImages/' + name[: name.index('.')] + "Alpha" + str(alphaValue) + '.png')
+        new.save(YOURFILEPATH + name[: name.index('.')] + "Alpha" + str(alphaValue) + '.png')
     else:
         dest = input("Destination:\t")
         new.save(dest + '.png')
