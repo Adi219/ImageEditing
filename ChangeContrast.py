@@ -7,7 +7,7 @@ changePercent = float(input("Percentage Change:\t"))
 def changeContrast(name, mode, changePercent):
 
     if __name__ == '__main__':
-        img = Image.open('C:/Adi/Programming/AdiPython/AdiScripts/Others/Art/InputImages/' + name)
+        img = Image.open(YOURFILEPATH + name)
     else:
         img = Image.open(name)
 
@@ -54,7 +54,7 @@ def changeContrast(name, mode, changePercent):
     new.putdata(newData)
 
     if __name__ == '__main__':
-        new.save('C:/Adi/Programming/AdiPython/AdiScripts/Others/Art/GeneratedImages/' + name[: name.index('.')] + (str(mode).replace('1', 'IncreaseContrast')).replace('2', 'DecreaseContrast') + str(changePercent) + '.png')
+        new.save(YOURFILEPATH + name[: name.index('.')] + (str(mode).replace('1', 'IncreaseContrast')).replace('2', 'DecreaseContrast') + str(changePercent) + '.png')
     else:
         dest = input("Destination:\t")
         new.save(dest + '.png')
